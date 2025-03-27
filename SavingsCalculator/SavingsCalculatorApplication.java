@@ -17,9 +17,11 @@ import javafx.stage.Stage;
 public class SavingsCalculatorApplication extends Application {
 
     // set constant values here
-    private static final int MAX_PERIOD_IN_YEARS = 30;
-    private static final int MIN_SAVINGS_PER_MONTH = 0;
     private static final int MAX_SAVINGS_PER_MONTH = 250;
+    private static final int MAX_INTEREST_RATE = 10;
+    private static final int MAX_PERIOD_IN_YEARS = 30;
+
+
 
     private Map<Integer, Double> savings;
     private Map<Integer, Double> compoundSavings;
@@ -63,7 +65,7 @@ public class SavingsCalculatorApplication extends Application {
         Label yearsSliderLabel = new Label("Years");
 
         // 'monthly savings' (upper) slider and its properties
-        Slider savingsSlider = new Slider(MIN_SAVINGS_PER_MONTH, MAX_SAVINGS_PER_MONTH, this.monthlySavings);
+        Slider savingsSlider = new Slider(0, MAX_SAVINGS_PER_MONTH, this.monthlySavings);
         savingsSlider.setShowTickLabels(true);
         savingsSlider.setShowTickMarks(true);
         savingsSlider.setMajorTickUnit(25);
@@ -71,7 +73,7 @@ public class SavingsCalculatorApplication extends Application {
         savingsSlider.setBlockIncrement(1);
 
         // 'interest rate' (middle) slider and its properties
-        Slider interestRateSlider = new Slider(0, 10, this.interestRate);
+        Slider interestRateSlider = new Slider(0, MAX_INTEREST_RATE, this.interestRate);
         interestRateSlider.setShowTickLabels(true);
         interestRateSlider.setShowTickMarks(true);
         interestRateSlider.setMajorTickUnit(1);
