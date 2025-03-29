@@ -1,5 +1,5 @@
 # Asteroids game
-Asteroids game written in Java with the help of JavaFx for the user interface.
+Asteroids game written in Java with the help of JavaFX.
 
 ## Installation
 OpenJDK 11.026 and JavaFX SDK 17.0.14 were used.
